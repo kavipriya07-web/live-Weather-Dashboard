@@ -1,0 +1,141 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eaff, #fce7f3);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #444;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #6c63a8;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+}
+
+/* Search */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #ddd9f5;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #9688dc;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #9688dc;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7869c2;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Status */
+#status {
+    text-align: center;
+    margin: 15px 0;
+    color: #7869a8;
+    font-weight: bold;
+}
+
+/* Current Weather */
+#currentWeather {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+/* Forecast */
+.forecast-section h2 {
+    color: #6c63a8;
+    margin-bottom: 15px;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.forecast-card {
+    background: white;
+    padding: 20px 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.forecast-card h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.forecast-card p {
+    margin: 8px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    #forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
